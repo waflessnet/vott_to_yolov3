@@ -1,5 +1,6 @@
 import glob
 import json
+import re
 from pathlib import Path
 from typing import List, Dict, Tuple
 from shutil import copyfile
@@ -106,6 +107,6 @@ class Convert:
         relative_height = float(abs_h / full_h)
 
         label: str = data.regions[0]['tags'][0]
-        label = label.replace('-', '').replace('\t', '')
+        label = re.sub(r'[\s+-]', '', label)
         name_file: str = data.asset['name']
         return name_file, label, relative_center_x, relative_center_y, relative_width, relative_height
