@@ -94,7 +94,6 @@ class VottToDarknet(AbstractHandler):
 
         Files.save_names(save_names, labels)
         request.labels = labels
-        # print(labels)
         super().handle(request)
 
 
@@ -103,9 +102,12 @@ class ConfigFile(AbstractHandler):
         classes = len(request.labels)
         train = request.save_train
         names = request.save_names
+        save_data = '{}/{}'.format(request.path_output, PATH_SAVE_DATA)
+        content_file = "classes={classes}\n" \
+                       "train={train}\n" \
+                       "valid=\n" \
+                       "names={names}".format(classes=classes, train=train, names=names)
 
-        content_file ="classes={classes}\n" \   
-                      "train={train}\n" \
-                      "valid=\n" \
-                      "names={names}".format(classes=classes, train=train, names=names)
         print(content_file)
+        with open(save_data, 'w') as f:
+            f.write(content_file)
