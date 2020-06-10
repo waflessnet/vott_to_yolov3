@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "0a9f67b120bdcaabdf1feeb854768f1a",
+        "name": "ABGG.jpg",
+        "path": "/home/panchito/Documentos/train/Destino1/Origen-1-PascalVOC-export/JPEGImages/ABGG.jpg",
+        "size": {
+            "width": 1280,
+            "height": 960
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "6Yu3Ud0mx",
+            "type": "RECTANGLE",
+            "tags": [
+                "label-1"
+            ],
+            "boundingBox": {
+                "height": 776.4705882352941,
+                "width": 1256.4705882352941,
+                "left": 2.3529411764705883,
+                "top": 144.31372549019608
+            },
+            "points": [
+                {
+                    "x": 2.3529411764705883,
+                    "y": 144.31372549019608
+                },
+                {
+                    "x": 1258.8235294117646,
+                    "y": 144.31372549019608
+                },
+                {
+                    "x": 1258.8235294117646,
+                    "y": 920.7843137254902
+                },
+                {
+                    "x": 2.3529411764705883,
+                    "y": 920.7843137254902
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}
